@@ -1,11 +1,11 @@
 import React from "react";
 
-class Userinfor extends React.Component {
+class AddUserInfor extends React.Component {
 
     state = {
         name: 'Phuoc',
         address: 'Can Tho',
-        age: '24'
+        age: 24
     }
 
 
@@ -20,16 +20,25 @@ class Userinfor extends React.Component {
 
     handleOnchaneInut = (event) => {
         this.setState({
-            name: event.target.value
+            name: event.target.value,
+
         })
+    }
+    handleOnchangeInputAge = (event) => {
+        this.setState({
+            age: event.target.value
+        })
+
     }
     handleOnsubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
+        this.props.handleAddUser({
+            id: Math.floor(Math.random() * 100) + 1 + '-random',
+            name: this.state.name,
+            age: this.state.age
+        });
+        // console.log(this.state)
     }
-
-
-
     render() {
         return (
             <div>This is Component <br></br>
@@ -39,8 +48,12 @@ class Userinfor extends React.Component {
                     <input
                         placeholder={this.state.name}
                         type="text"
-
                         onChange={(event) => this.handleOnchaneInut(event)}
+                    />
+                    <input
+                        placeholder={this.state.age}
+                        type="text"
+                        onChange={(event) => this.handleOnchangeInputAge(event)}
                     />
                     <button>Submit</button>
                 </form>
@@ -49,4 +62,4 @@ class Userinfor extends React.Component {
         )
     }
 }
-export default Userinfor;
+export default AddUserInfor;
