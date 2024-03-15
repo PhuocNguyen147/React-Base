@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 // import { useDispatch, useSelector } from 'react-redux';
 import MyComponent from './components/Mycomponent';
 // import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
@@ -8,10 +8,10 @@ import React from 'react';
 class App extends React.Component {
   render() {
     return (
-      <>
+      <div className='app-container'>
         <div>Phuoc Huu</div>
         <MyComponent></MyComponent>
-      </>
+      </div>
     );
   }
 }
