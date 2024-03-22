@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import './DisplayInfor.scss';
 import logo1 from './../logo.svg';
 // class DisplayInfor extends React.Component {
@@ -40,6 +40,12 @@ const DisplayInfor = (props) => {
     const handleShowhide = () => {
         setShowListUser(!isShowlistUser)
     }
+
+    useEffect(() => {
+        if (listUser.length === 0) {
+            alert('no users')
+        }
+    }, [listUser])
     return (
         <div className="display-infor-container">
             <img src={logo1}></img>
