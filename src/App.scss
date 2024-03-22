@@ -8,5 +8,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App-container{
+  .header-container{
+    .navbar-nav {
+      .nav-link{
+      &.active {
+        color: rgb(31, 205, 218);
+    }
+  }
+}
+}
+}
 
 
