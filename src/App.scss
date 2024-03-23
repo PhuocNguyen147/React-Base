@@ -7,17 +7,85 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (min-width: 1750px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1862px !important;
+  }
+}
 
 .App-container{
   .header-container{
-    .navbar-nav {
+    .navbar {
+      padding-top: 30px;
+      z-index: 10;
+       background-color: rgba(0,0,0,0) !important;
       .nav-link{
       &.active {
         color: rgb(31, 205, 218);
+      }
+    }
+  }
+    .btn-login{
+      margin: 0 15px;
+      padding: 0 15px;
+      border: 1px solid #bbbaba;
+      border-radius: 5px;
+      height: 40px;
+      &:hover{
+        background-color: white;
+      }
+    }
+    .btn-signup{
+      background-color: #505050;
+      color: white;
+      border-radius: 5px;
+      border: 1px solid;
+      padding: 0 15px;
+      height: 40px;
+      &:hover{
+        background-color: black;
+      }  
+    }
+
+}
+}
+
+.homepage-container{ 
+  // width: 50%;
+    video{
+      position: fixed;
+      bottom: 0;
+      width: 100vw;
+
+    } 
+  .homepage-content{
+    position: relative;
+    padding: 0 100px;
+    margin-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title-1{
+      font-size: 50px;
+      font-weight: 600;
+    }
+    .title-1{
+      font-size: 25px;
+      font-weight: 500;
+    }
+    .title-3{
+        button{
+          background-color: #505050;
+          color: white;
+          border-radius: 5px;
+          border: 1px solid;
+          padding: 0 15px;
+          height: 40px;
+          &:hover{
+            background-color: black;
+          }  
+}
     }
   }
 }
-}
-}
-
-
