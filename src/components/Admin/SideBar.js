@@ -83,7 +83,7 @@ const SideBar = (props) => {
                             rel="noopener noreferrer"
                         >
                             <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
-                                &#169; Hỏi Dân IT Udemy
+                                &#169; Nguyen Huu Phuoc
                             </span>
                         </a>
                     </div>
